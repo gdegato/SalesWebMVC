@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 using SalesWebMVC.Data;
 using SalesWebMVC.Services;
 using System.Globalization;
-
+using SalesWebMvc.Services;
 
 namespace SalesWebMVC
 {
@@ -31,7 +31,6 @@ namespace SalesWebMVC
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
 
             services.Configure<CookiePolicyOptions>(options =>
             {
@@ -50,6 +49,7 @@ namespace SalesWebMVC
             services.AddScoped<SeedingService>();
             services.AddScoped<SellerService>();
             services.AddScoped<DepartmentService>();
+            services.AddScoped<SalesRecordService>();
 
         }
 
